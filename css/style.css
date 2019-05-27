@@ -1,0 +1,530 @@
+/* FLEXBOX */
+.flex {display: -webkit-box;display: -ms-flexbox;display: flex;}
+.f-inline {display: -webkit-inline-box;display: -ms-inline-flexbox;display: inline-flex;}
+.f-wrap {-ms-flex-wrap: wrap;flex-wrap: wrap;}
+/* ALIGN-SELF https://css-tricks.com/?s=align-self&orderby=relevance&post_type=post%2Cpage%2Cguide */
+.f-self-start {-ms-flex-items-align: start;-ms-flex-item-align: start;align-self: flex-start;}
+.f-self-end {-ms-flex-items-align: end;-ms-flex-item-align: end;align-self: flex-end;}
+.f-self-center {-ms-flex-items-align: center;-ms-grid-row-align: center;-ms-flex-item-align: center;align-self: center;}
+.f-self-baseline {-ms-flex-items-align: baseline;-ms-flex-item-align: baseline;align-self: baseline;}
+.f-self-stretch {-ms-flex-items-align: stretch;-ms-grid-row-align: stretch;-ms-flex-item-align: stretch;align-self: stretch;}
+/* ALIGN-ITEMS https://css-tricks.com/almanac/properties/a/align-items/ */
+.f-items-start {-webkit-box-align: start;-ms-flex-align: start;align-items: flex-start;}/* cross-start margin edge of the items is placed on the cross-start line */
+.f-items-end {-webkit-box-align: end;-ms-flex-align: end;align-items: flex-end;}/* cross-end margin edge of the items is placed on the cross-end line */
+.f-items-center {-webkit-box-align: center;-ms-flex-align: center;align-items: center;}/* items are centered in the cross-axis */
+.f-items-stretch {-webkit-box-align: stretch;-ms-flex-align: stretch;align-items: stretch;}/* stretch to fill the container (still respect min-width/max-width) */
+.f-items-baseline {-webkit-box-align: baseline;-ms-flex-align: baseline;align-items: baseline;}/* items are aligned such as their baselines align */
+/* ALIGN-CONTENT https://css-tricks.com/almanac/properties/a/align-content/ */
+.f-content-start {-ms-flex-line-pack: start;align-content: flex-start;}
+.f-content-end {-ms-flex-line-pack: end;align-content: flex-end;}
+.f-content-center {-ms-flex-line-pack: center;align-content: center;}
+.f-content-between {-ms-flex-line-pack: justify;align-content: space-between;}
+.f-content-around {-ms-flex-line-pack: distribute;align-content: space-around;}
+/* JUSTIFY-CONTENT https://css-tricks.com/almanac/properties/j/justify-content/ */
+.f-justify-end {-webkit-box-pack: end;-ms-flex-pack: end;justify-content: end;}
+.f-justify-center {-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;}
+.f-justify-between {-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;}
+.f-justify-around {-ms-flex-pack: distribute;justify-content: space-around;}
+.f-justify-evenly {-webkit-box-pack: space-evenly;-ms-flex-pack: space-evenly;justify-content: space-evenly;}
+/* FLEX-DIRECTION https://css-tricks.com/almanac/properties/f/flex-direction/ */
+.f-row {-webkit-box-orient: horizontal;-webkit-box-direction: normal;-ms-flex-direction: row;flex-direction: row;}/* left to right */
+.f-row-reverse {-webkit-box-orient: horizontal;-webkit-box-direction: reverse;-ms-flex-direction: row-reverse;flex-direction: row-reverse;}/* right to left */
+.f-column {-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;}/* same as row but top to bottom */
+.f-column-reverse {-webkit-box-orient: vertical;-webkit-box-direction: reverse;-ms-flex-direction: column-reverse;flex-direction: column-reverse;}/* same as row-reverse but bottom to top */
+.d-none{display: none;}
+.t-center {text-align: center;}
+html {font-size: 62.5%;}
+body {padding-top: 133px;color: #3B3A35;font-family: Abhaya Libre;font-size: 1.8rem;}
+a:link {text-decoration: none;}
+a{color: inherit;}
+img {width: 100%;}
+.container {max-width: 90%!important;}
+li {list-style-type: none;}
+.h-100 {height: 100%;}
+.w-100 {width: 100% !important;}
+/* FONT SIZE */
+.ft-14 {font-size: 1.4rem;}
+.ft-16 {font-size: 1.6rem;}
+.ft-18 {font-size: 1.8rem;}
+.ft-20 {font-size: 2.0rem;}
+.ft-22 {font-size: 2.2rem;}
+.ft-24 {font-size: 2.4rem;}
+.ft-26{font-size: 2.6rem;}
+.ft-30{font-size: 3.0rem;}
+.ft-36 {font-size: 3.6rem;}
+.ft-48 {font-size: 4.8rem;}
+/* COLORS */
+.bg-1 {background-color: #2D3E50;}
+.bg-2 {background-color: #EFC319;}
+.bg-3 {background-color: #fbd674;}
+.bg-4 {background-color: #ffe097;}
+.bg-5 {background-color: #ffeaba;}
+.bg-6 {background-color: #3B3A35;}
+.screen-reader-text{
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+/* HEADER */
+#header {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  width: 100%;
+  background-color: #2D3E50;
+}
+#header img{
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+#header li{
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+.logo img{
+  display: block;
+  float: left;
+}
+.headerMince .logo img{
+  width: 150px;
+}
+.logo img {
+  margin: 5%;
+  background-color: #fff;
+}
+.headerNav {
+  color: white;
+  font-family: Abhaya Libre;
+}
+.headerNav ul{
+  padding-top: 20px;
+}
+.headerNav li a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 20px;
+  text-decoration: none;
+}
+.headerNav li:last-child a {
+  margin-right: 0;
+}
+.headerNav a:hover {
+  color: #EFC319;
+}
+.contactButton a {
+  color: #3B3A35;
+  padding: 0.1rem 0.3rem;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: #EFC319;
+}
+.contactButton a:hover {
+  background-color: white;
+  color: #2D3E50;
+}
+
+/* MENU MOBILE */
+.b-menu img {
+  position: absolute;
+  width: 48px;
+  top: 25%;
+  right: 10%;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.nav-sidebar-container{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 25;
+}
+.nav-sidebar-container .overlay{
+  opacity: 1;
+  -webkit-transition: opacity 0.5s; 
+  -moz-transition: opacity 0.5s; 
+  -o-trnasition: opacity 0.5s; 
+  transition: opacity 0.5s;
+}
+.nav-sidebar{
+  max-width: 30rem;
+  position: relative;
+  z-index: 25;
+  padding: 2rem;
+  height: 100vh;
+  background-color: #EFC319;
+  -webkit-transition: transform 0.3s; 
+  -webkit-transition: -webkit-transform 0.3s; 
+  transition: -webkit-transform 0.3s; 
+  transition: transform 0.3s; 
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  overflow: auto;
+}
+.nav-sidebar ul{
+  padding: 0;
+  margin: 10%;
+}
+.nav-sidebar li{
+  margin-bottom: 50px;
+}
+.nav-sidebar li a{
+  color: white;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 600;
+  padding: 1%;
+  font-size: 2.2rem;
+  background-color: #2D3E50;
+}
+.nav-sidebar li a:hover{
+  background-color: white;
+  color: #3B3A35;
+}
+.nav-sidebar-container.hide{
+  display: block !important;
+  right: -10000rem !important;
+}
+.nav-sidebar-container.hide .nav-sidebar{
+  -webkit-transform: translate(100%);
+  transform: translate(100%);
+}
+.nav-sidebar-container.hide .overlay{
+  opacity: 0;
+}
+
+/* FOOTER */
+#footer {
+  padding: 2rem 0 1%;
+  width: 100%;
+  height: auto;
+  color: white;
+  font-family: Abhaya Libre;
+}
+.logoFooter {
+  margin-right: 30px;
+}
+
+/* CAROUSEL ACCUEIL */
+.imgCondo1 {
+  background-image: url('../img/condos/condofamilial/salon.jpg');
+}
+.imgCondo2 {
+  background-image: url('../img/condos/condominimaliste/salon.jpg');
+}
+.imgCondo3 {
+  background-image: url('../img/condos/condomoderne/salon.jpeg');
+}
+.carousel-item .titleCondo,
+.lead {
+  color: #fff;
+  text-shadow: 2px 2px 2px #3B3A35;
+  -webkit-animation: move 2s;
+  animation: move 2s;
+  font-family: Libre Baskerville;
+  font-weight: 700;
+}
+@-webkit-keyframes move {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+@keyframes move {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+@keyframes move {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+/* DESCRIPTION */
+.descript p{
+  padding: 3rem 0;
+  text-align: center;
+  text-justify: auto;
+}
+
+/* CARTE CONDOS */
+.cardImage {
+  width: 50%;
+}
+.cardContent {
+  width: 50%;
+  padding-top: 9%;
+  padding-left: 4.0rem;
+  color: #EFC319
+}
+.cardText {
+  padding-right: 10rem;
+}
+.cardButton a{
+  color: #3B3A35;
+  padding: 1rem 1rem;
+  border-radius: 10px;
+}
+.cardButton a:hover {
+  background-color: white;
+  color: #2D3E50;
+}
+.cardButton {
+  margin-bottom: 2rem;
+}
+.carouselButtons {
+  display: inline-block;
+  width: 100%;
+}
+
+/* PAGE CONDOS */
+#condoBanner {
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  background-image: url('../img/condos/condomoderne/piece-ouverte.jpg');
+}
+.bannerTitle {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 2px #3B3A35;
+}
+
+/* TIROIRS */
+.tir-content {
+  position: absolute;
+  left: -10000px;
+}
+.tir-item.active .tir-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  left: 0;
+}
+.tir-head {
+  padding: 1%;
+  margin: 0;
+  cursor: pointer;
+  padding-right: 20%;
+  border-bottom: 1px solid black;
+}
+.tir-content {
+  background-color: #fff;
+  padding: 5%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.tir-head::before {
+  content: "";
+  background-image: url('../img/nexttiroir.png');
+  background-size: 20px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 25px;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+.tir-head h2 {
+  margin: 0;
+  width: 40%;
+}
+.tir-head p {
+  margin: 0;
+}
+.tir-item.active .tir-head::before {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.tir-descript {
+  width: 60%;
+}
+.condoText {
+  width: 50%;
+  margin-bottom: 30px;
+}
+.condoButtons{
+  width: 45%;
+  margin-left: 10px;
+}
+.condoButton{
+  display: inline-block;
+  color: #3B3A35;
+  padding: 1rem 1rem;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.condoButton:hover {
+  background-color: #2D3E50;
+  color: white;
+}
+.condoCarousel {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.slick-carousel {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.slick-slide {
+  margin: 0 10px;
+}
+.slick-next::before,
+.slick-prev::before {
+  color: black;
+}
+.image-descr-tech{
+  width:50px;
+  height:50px;
+}
+.descrp-tech-et-map{
+  width:40%;
+}
+.descr-tech{
+  border:1px solid #3b3a35;
+}
+.descr-tech ul{
+  padding: 0!important;
+}
+.div-icone{
+  margin:7% 0% 7% 0%;
+}
+
+/* PAGE CONTACT */
+#contactBanner{
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  background-image: url('../img/condos/outside.jpg');
+}
+.formulaire h1{
+  font-family: Libre Baskerville;
+  font-weight: 700;
+}
+.red{
+  color:red;
+}
+.form-area{
+  background-color: #FAFAFA;
+  padding: 10px 40px 60px;
+  margin: 10px 0px 60px;
+}
+.form-area input{
+  padding: 2% 0;
+}
+.contactBottom{
+  width: 100%;
+  height: auto;
+}
+.contactAdress{
+  width: 50%;
+}
+.textBottom{
+width: 100%;
+color: white;
+height: 5%;
+}
+.textAdress{
+max-width: 50%;
+color: white;
+}
+.form-check{
+  margin: 2%;
+}
+.form-check label{
+  margin-left: 2%;
+}
+.form-check input{
+  height: 20px;
+}
+.checkPlancher td{
+  width: 5%;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 720px){
+  .logo img{
+    width: 250px;
+  }
+  .headerNav{
+    display: none;
+  }
+  .tir-head {
+    padding-right: 5%;
+  }
+  .carouselPos{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .cardSection{
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .cardImage, .cardContent{
+    width: 100%;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+  .condoButtons, .condoText, iframe{
+    width: 100%;
+  }
+  #descrp-tech-et-map{
+    width:100%;
+    margin-bottom: 20px;
+  }
+  .condoButtons{
+    margin-bottom: 20px;
+  }
+  .textBottom iframe{
+    width: 100%;
+  }
+  .address{
+    width: 100%;
+  }
+  .footerAddress{
+    width: 100%;
+  }
+}
+@media screen and (min-width: 721px){
+  .b-menu{
+    display: none;
+  }
+}
+@media screen and (min-width: 721px) and (max-width:1080px){
+.headerNav ul{
+  -ms-flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse
+}
+}
