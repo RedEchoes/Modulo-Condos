@@ -81,11 +81,11 @@ li {list-style-type: none;}
   background-color: #2D3E50;
 }
 #header img{
-  -webkit-transition: all 0.7s;
+  -webkit-transition: all 0.5s;
   transition: all 0.7s;
 }
 #header li{
-  -webkit-transition: all 0.7s;
+  -webkit-transition: all 0.5s;
   transition: all 0.7s;
 }
 .logo img{

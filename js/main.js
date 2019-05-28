@@ -1,3 +1,6 @@
+$(document).ready(function () {
+$('.carousel').carousel();
+});
 /* HEADER */
 headerMince = false;
 $(window).scroll(function (e) {
